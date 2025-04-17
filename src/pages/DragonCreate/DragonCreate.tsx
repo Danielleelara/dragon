@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { createDragon, getDetails, updateDragon } from "../../services/api";
+import PageWrapper from "../../components/PageWrapper";
 
 export type Dragon = {
     createdAt?: string;
@@ -81,7 +82,7 @@ export const DragonCreate = () => {
     }, [id]);
 
   return (
-    <main >
+    <PageWrapper >
         {loading ? <h1>...Loading</h1> : <>
             <h1 >{id ? 'Editar': 'Criar'}</h1>
             <input
@@ -97,8 +98,8 @@ export const DragonCreate = () => {
              <button onClick={()=> id ? editDragon() : newDragon()}> {id ? 'Editar': 'Criar'} </button>
            
         </>
-}
-   
-    </main>
+}       
+
+    </PageWrapper>
   );
 };

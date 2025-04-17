@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getDetails } from "../../services/api";
+import PageWrapper from "../../components/PageWrapper";
 
 export type Dragon = {
     createdAt: string;
@@ -35,7 +36,7 @@ useEffect(() => {
 const formatedDate = dragon?.createdAt && new Date (dragon?.createdAt).toLocaleDateString()
 
   return (
-    <main >
+    <PageWrapper >
         {loading ? <h1>...Loading</h1> : <>
             <h1 >Detalhes</h1>
             <p >Data da Criação: {formatedDate}</p>
@@ -44,6 +45,6 @@ const formatedDate = dragon?.createdAt && new Date (dragon?.createdAt).toLocaleD
         </>
 }
    
-    </main>
+    </PageWrapper>
   );
 };

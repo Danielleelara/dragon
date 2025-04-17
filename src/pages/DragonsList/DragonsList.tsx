@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { getList, deleteDragon } from "../../services/api";
+import { CgEye, CgTrash, CgPen } from "react-icons/cg";
 import { useNavigate } from "react-router";
+import styles from "./DragonList.module.css";
+import PageWrapper from "../../components/PageWrapper";
 
 export type Dragon = {
   createdAt: string;
@@ -56,28 +59,27 @@ export const DragonsList = () => {
   );
 
   return (
-    <main>
-      {loading ? (
-        <h1>...Loading</h1>
-      ) : (
-        <>
-          <ol>
-            {orderedList &&
-              orderedList.map((dragon) => (
-                <div key={dragon.id} style={{display: 'flex', justifyContent: 'space-between'}}>
-                <li
-                  onClick={() => navigate(`/details/${dragon.id}`)}
-                >
-                  {dragon.name}
-                </li>
-                <button onClick={()=> editDragon(Number(dragon.id))}>Editar</button>
-                <button onClick={()=> removeDragon(Number(dragon.id))}>Delete</button>
-                </div>
-              ))}
-          </ol>
-          <button onClick={()=> navigate('/dragon-create')}>Criar um dragão</button>
-        </>
-      )}
-    </main>
+    <PageWrapper>
+      <main>
+        {loading ? (
+          <h1>...Loading</h1>
+        ) : (
+          <div className={styles.container}>
+            <ul>
+              {orderedList &&
+                orderedList.map((dragon) => (
+                  <div key={dragon.id} style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <li>{dragon.name}</li>
+                    <li><CgEye onClick={() => navigate(`/details/${dragon.id}`)}/></li>
+                    <li> <CgPen onClick={()=> editDragon(Number(dragon.id))}/></li>
+                    <li> <CgTrash onClick={()=> removeDragon(Number(dragon.id))}/></li>
+                  </div>
+                ))}
+            </ul>
+            <button onClick={()=> navigate('/dragon-create')}>Novo</button>
+          </div>
+        )}
+      </main>
+    </PageWrapper>
   );
 };
