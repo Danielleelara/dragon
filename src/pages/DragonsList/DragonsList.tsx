@@ -60,7 +60,7 @@ export const DragonsList = () => {
 
   return (
     <PageWrapper>
-      <main>
+      {/* <main style={{ background: 'red'}} > */}
         {loading ? (
           <h1>...Loading</h1>
         ) : (
@@ -69,17 +69,19 @@ export const DragonsList = () => {
               {orderedList &&
                 orderedList.map((dragon) => (
                   <div key={dragon.id} style={{display: 'flex', justifyContent: 'space-between'}}>
-                    <li>{dragon.name}</li>
-                    <li><CgEye onClick={() => navigate(`/details/${dragon.id}`)}/></li>
-                    <li> <CgPen onClick={()=> editDragon(Number(dragon.id))}/></li>
-                    <li> <CgTrash onClick={()=> removeDragon(Number(dragon.id))}/></li>
+                    <li className={styles.dragonsName}>{dragon.name}</li>
+                    <li>
+                    <CgEye onClick={() => navigate(`/details/${dragon.id}`)}/>
+                     <CgPen onClick={()=> editDragon(Number(dragon.id))}/>
+                    <CgTrash onClick={()=> removeDragon(Number(dragon.id))}/>
+                    </li>
                   </div>
                 ))}
             </ul>
             <button onClick={()=> navigate('/dragon-create')}>Novo</button>
           </div>
         )}
-      </main>
+      {/* </main> */}
     </PageWrapper>
   );
 };

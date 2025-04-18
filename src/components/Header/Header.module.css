@@ -1,17 +1,17 @@
 header {
-    background: pink;
-    padding: 10px;
+    width: 100%;
 }
 
 
 .link {
     font-family: 'Caveat', cursive;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2em;
     margin-top: 0.5em;
-    color: #816882;
+    color:  #849f54;
     text-decoration: none;
     cursor: pointer;
+    padding: 20px;
 }
 
 .link:hover {
