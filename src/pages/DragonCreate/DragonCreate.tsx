@@ -38,20 +38,7 @@ export const DragonCreate = () => {
 
 
 
-    const getDragon = async () => {
-    setLoading(true)
-        try {
-        const data = await getDetails(Number(id))
-        setDragon({
-            name: data.name,
-            type: data.type,
-        })
-        } catch {
-        alert('Não foi possível buscar os detalhes do dragão! Tente novamente ou contate o nosso time!')
-        } finally{
-        setLoading(false)
-        }
-    }
+  
 
     const editDragon = async () => {
         setLoading(true)
@@ -78,6 +65,20 @@ export const DragonCreate = () => {
     }
 
     useEffect(() => {
+        const getDragon = async () => {
+            setLoading(true)
+                try {
+                const data = await getDetails(Number(id))
+                setDragon({
+                    name: data.name,
+                    type: data.type,
+                })
+                } catch {
+                alert('Não foi possível buscar os detalhes do dragão! Tente novamente ou contate o nosso time!')
+                } finally{
+                setLoading(false)
+                }
+            }
     getDragon();
     }, [id]);
 

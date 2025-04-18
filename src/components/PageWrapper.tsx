@@ -2,11 +2,15 @@ import { Fragment } from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 
-const PageWrapper = ({ children }) => {
+type Props = {
+  children?: React.ReactNode
+};
+
+const PageWrapper = ({children}: Props) => {
   return (
     <Fragment>
       <Header />
-        {children}
+        <div>{children}</div>
       <Footer />
     </Fragment>
   );

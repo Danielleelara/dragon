@@ -20,7 +20,7 @@ export const Login = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const submit = async (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const user = {

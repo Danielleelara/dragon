@@ -27,7 +27,7 @@ createServer({
     this.post("/", (schema, request) => {
       const login = JSON.parse(request.requestBody);
 
-      return schema.users.findBy({
+      return schema.db.users.findBy({
         nickname: login.nickname,
         password: login.password,
       });
