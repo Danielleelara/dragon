@@ -65,20 +65,24 @@ export const DragonsList = () => {
           <h1>...Loading</h1>
         ) : (
           <>
+          <div className={styles.buttonDiv}>
+          <button onClick={()=> navigate('/dragon-create')}>Novo</button>
+          </div>
             <ul>
               {orderedList &&
                 orderedList.map((dragon) => (
                   <div key={dragon.id} style={{display: 'flex', justifyContent: 'space-between'}}>
                     <li className={styles.dragonsName}>{dragon.name}</li>
                     <li>
-                    <CgEye onClick={() => navigate(`/details/${dragon.id}`)}/>
-                     <CgPen onClick={()=> editDragon(Number(dragon.id))}/>
-                    <CgTrash onClick={()=> removeDragon(Number(dragon.id))}/>
+                    <CgEye title="Detalhes" className={styles.icon} onClick={() => navigate(`/details/${dragon.id}`)}/>
+                     <CgPen title="Editar" className={styles.icon} onClick={()=> editDragon(Number(dragon.id))}/>
+                    <CgTrash title="Deletar" className={styles.icon} onClick={()=> removeDragon(Number(dragon.id))}/>
                     </li>
                   </div>
                 ))}
             </ul>
-            <button onClick={()=> navigate('/dragon-create')}>Novo</button>
+
+            
           </>
           )}
         </div>

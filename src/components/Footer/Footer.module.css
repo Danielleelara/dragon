@@ -10,9 +10,9 @@
     justify-content: center;
     font-family: 'Caveat', cursive;
     flex-direction: column;
-    font-weight: bold;
+    color: #FFFFFF;
 }
 
 a {
-    color: #7f9b4e;
+    color: #FFFFFF;
 }
