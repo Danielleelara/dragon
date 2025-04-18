@@ -8,12 +8,12 @@ header {
     font-weight: bold;
     font-size: 2em;
     margin-top: 0.5em;
-    color:  #849f54;
+    color: #dde3d2;
     text-decoration: none;
     cursor: pointer;
-    padding: 20px;
+    padding: 30px;
 }
 
 .link:hover {
-    color: #816882;
+    color: #90c436;
 }

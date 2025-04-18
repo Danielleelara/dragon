@@ -1,9 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { createServer, Model } from "miragejs";
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { createServer, Model, Response } from "miragejs";
+import { v4 as uuidv4 } from 'uuid';
 
+import "./index.css";
+import App from "./App.tsx";
 
 createServer({
   models: {
@@ -27,20 +28,26 @@ createServer({
     this.post("/", (schema, request) => {
       const login = JSON.parse(request.requestBody);
 
-      return schema.db.users.findBy({
+      const user = schema.db.users.findBy({
         nickname: login.nickname,
         password: login.password,
       });
+
+      if (!user) {
+        return new Response(401, {}, { error: "Unauthorized" });
+      }
+
+      const token = uuidv4();
+
+      return new Response(200, {}, { token });
     });
 
     this.passthrough("http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/**");
-
-  }
-
+  },
 });
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>,
-)
+  </StrictMode>
+);

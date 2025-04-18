@@ -60,11 +60,11 @@ export const DragonsList = () => {
 
   return (
     <PageWrapper>
-      {/* <main style={{ background: 'red'}} > */}
+      <div className={styles.container}>
         {loading ? (
           <h1>...Loading</h1>
         ) : (
-          <div className={styles.container}>
+          <>
             <ul>
               {orderedList &&
                 orderedList.map((dragon) => (
@@ -79,9 +79,9 @@ export const DragonsList = () => {
                 ))}
             </ul>
             <button onClick={()=> navigate('/dragon-create')}>Novo</button>
-          </div>
-        )}
-      {/* </main> */}
+          </>
+          )}
+        </div>
     </PageWrapper>
   );
 };

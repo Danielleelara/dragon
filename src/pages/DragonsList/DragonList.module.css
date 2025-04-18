@@ -25,6 +25,7 @@ li {
     justify-content: space-between;
     height: 40px;
     width: 30%;
+    border-bottom: 1px solid #586b394f ;
 }  
 
 .dragonsName {
