@@ -4,9 +4,12 @@ Este é um projeto front-end desenvolvido com **React** e **TypeScript**, que si
 
 ## 🐉 Telas
 
-<img width="1409" alt="Captura de Tela 2025-04-20 às 12 38 37" src="https://github.com/user-attachments/assets/379519f6-d869-4e23-9b9f-30f7001a175a" />
-<img width="1419" alt="Captura de Tela 2025-04-20 às 12 38 58" src="https://github.com/user-attachments/assets/2b448c26-64ae-48b4-8f99-121bc858dd93" />
-<img width="500"  alt= Captura de Tela 2025-04-20 às 12 39 30" src="https://github.com/user-attachments/assets/8c95988c-c149-4522-804a-45442e97a0ab"/>
+<img width="1415" alt="Captura de Tela 2025-04-20 às 14 16 52" src="https://github.com/user-attachments/assets/e2ebb9cf-8fb8-4bf3-a7dc-1972b12c439f" />
+<img width="1415" alt="Captura de Tela 2025-04-20 às 14 11 54" src="https://github.com/user-attachments/assets/69eca790-3f83-4418-89d9-9eb61ecddf1b" />
+<img width="1376" alt="Captura de Tela 2025-04-20 às 14 12 05" src="https://github.com/user-attachments/assets/5609d7fe-8d8f-4f50-9c87-2d6f2d0d495a" />
+<img width="400" alt="Captura de Tela 2025-04-20 às 14 13 13" src="https://github.com/user-attachments/assets/a04312b7-af77-40b8-b02e-29b19080e6b4" />
+<img width="400" alt="Captura de Tela 2025-04-20 às 14 13 29" src="https://github.com/user-attachments/assets/dc836355-2ad9-415b-b074-3fbbb074568b" />
+
 
 ## 🔐 Login
 
