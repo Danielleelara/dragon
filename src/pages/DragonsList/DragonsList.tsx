@@ -38,6 +38,11 @@ export const DragonsList = () => {
 
   const removeDragon = async (id: number) => {
     setLoading(true);
+    const removeConfirm = confirm('Tem certeza que deseja excluir esse dragão?');
+    if(!removeConfirm){
+      setLoading(false);
+      return;
+    }
     try {
       await deleteDragon(id);
     } catch {
