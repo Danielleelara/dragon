@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import styles from "./Login.module.css";
+import Button from "../../components/Button/Button";
 
 type Props = {
   nickname: string;
@@ -77,10 +78,7 @@ export const Login = () => {
           id="password"
           onChange={handleChange}
         />
-
-        <button type="submit" className={styles.button}>
-          {loading ? "Loading" : "Enviar"}
-        </button>
+        <Button label={loading ? "Loading" : "Enviar"} />
       </form>
     </main>
   );

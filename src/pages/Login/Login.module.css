@@ -38,22 +38,6 @@ form {
 
 }
 
-.button {
-    background-color:#9ACD32;
-    border: none;
-    color: aliceblue;
-    border-radius: 10px;
-    height: 2.5em;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-.button:hover {
-    background-color:rgb(124, 128, 131);
-}
-
 @media screen and (min-width: 600px) {
     .container {
         width: 30%;
