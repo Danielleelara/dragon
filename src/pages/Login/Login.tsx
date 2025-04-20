@@ -68,6 +68,7 @@ export const Login = () => {
           id="nickname"
           name="nickname"
           onChange={handleChange}
+          required
         />
 
         <label htmlFor="password">Senha</label>
@@ -77,6 +78,7 @@ export const Login = () => {
           type="password"
           id="password"
           onChange={handleChange}
+          required
         />
         <Button label={loading ? "Loading" : "Enviar"} />
       </form>

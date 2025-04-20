@@ -72,7 +72,7 @@ export const DragonsList = () => {
             <ul>
               {orderedList &&
                 orderedList.map((dragon) => (
-                  <div key={dragon.id} style={{display: 'flex', justifyContent: 'space-between'}}>
+                  <div key={dragon.id} className={styles.listContainer}>
                     <li className={styles.dragonsName}>{dragon.name}</li>
                     <li>
                     <CgEye title="Detalhes" className={styles.icon} onClick={() => navigate(`/details/${dragon.id}`)}/>

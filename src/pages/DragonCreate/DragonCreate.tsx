@@ -23,13 +23,14 @@ export const DragonCreate = () => {
 
   const newDragon = async () => {
     setLoading(true);
+
     try {
-      const data = await createDragon({
+      await createDragon({
         name: dragon.name,
         type: dragon.type,
       });
+
       navigate("/dragons-list");
-      console.log(data);
     } catch {
       alert(
         "Não foi possível criar um novo dragão! Tente novamente ou contate o nosso time!"
@@ -42,12 +43,11 @@ export const DragonCreate = () => {
   const editDragon = async () => {
     setLoading(true);
     try {
-      const data = await updateDragon(Number(id), {
+        await updateDragon(Number(id), {
         name: dragon.name,
         type: dragon.type,
       });
       navigate("/dragons-list");
-      console.log(data);
     } catch {
       alert(
         "Não foi possível editar esse dragão! Tente novamente ou contate o nosso time!"
@@ -101,6 +101,7 @@ export const DragonCreate = () => {
             value={dragon.name}
             name="name"
             onChange={(e) => handleChange(e)}
+            required
           />
           <label className={styles.createLabel} htmlFor="type">Tipo</label>
           <input
@@ -108,6 +109,7 @@ export const DragonCreate = () => {
             name="type"
             value={dragon.type}
             onChange={(e) => handleChange(e)}
+            required
           />
           <Button label= {id ? "Editar" : "Criar"} primary/>
           </form>

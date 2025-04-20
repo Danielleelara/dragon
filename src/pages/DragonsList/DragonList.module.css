@@ -10,6 +10,11 @@
     padding-bottom: 5rem;
 }
 
+.listContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
 ul {
     margin-top: 2rem;
     width: 70%;  
@@ -48,24 +53,6 @@ li {
     display: flex; 
     justify-content: flex-end;
 }
-
-button {
-    background-color:#9ACD32;
-    border: none;
-    color: aliceblue;
-    border-radius: 10px;
-    height: 3em;
-    min-width: 200px;
-    cursor: pointer;
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-.button:hover {
-    background-color:rgb(124, 128, 131);
-}
-
-
 
 @media screen and (min-width: 580px) {
     ul {
