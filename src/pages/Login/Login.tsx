@@ -34,6 +34,7 @@ export const Login = () => {
       const response = await fetch("http://localhost:5173/", {
         method: "POST",
         body: JSON.stringify(user),
+        referrerPolicy: "unsafe-url" 
       });
 
       if (response.ok) {

@@ -8,47 +8,50 @@ export type Dragon = {
 };
 
 export const getList = async (): Promise<Dragon[]> => {
-  const response = await fetch(`${BASE_URL}/dragon`);
+  const response = await fetch(`${BASE_URL}/dragon`, {
+    referrerPolicy: "unsafe-url",
+  });
   return response.json();
 };
 
 export const getDetails = async (id: number): Promise<Dragon> => {
-    const response = await fetch(`${BASE_URL}/dragon/${id}`);
-    return response.json();
+  const response = await fetch(`${BASE_URL}/dragon/${id}`, {
+    referrerPolicy: "unsafe-url",
+  });
+  return response.json();
 };
-  
+
 export const createDragon = async (dragonData: Dragon) => {
-    const response = await fetch(`${BASE_URL}/dragon`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dragonData)
-        }
-    )
-    return response.json();
+  const response = await fetch(`${BASE_URL}/dragon`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(dragonData),
+    referrerPolicy: "unsafe-url",
+  });
+  return response.json();
 };
-  
+
 export const updateDragon = async (id: number, dragonData: Dragon) => {
-    const response = await fetch(`${BASE_URL}/dragon/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dragonData)
-        }
-    )
-    return response.json();
+  const response = await fetch(`${BASE_URL}/dragon/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(dragonData),
+    referrerPolicy: "unsafe-url",
+  });
+  return response.json();
 };
 
 export const deleteDragon = async (id: number) => {
-    const response = await fetch(`${BASE_URL}/dragon/${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-        }
-    )
-    return response.json();
+  const response = await fetch(`${BASE_URL}/dragon/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    referrerPolicy: "unsafe-url",
+  });
+  return response.json();
 };
-  
