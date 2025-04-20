@@ -2,17 +2,16 @@
 
 Este é um projeto front-end desenvolvido com **React** e **TypeScript**, que simula uma interface de gerenciamento de dragões. Ele utiliza o **MirageJS** exclusivamente para simular o **login**, enquanto as demais funcionalidades interagem com uma **API real externa**.
 
-##  Telas
+## 🐉 Telas
 
 <img width="1409" alt="Captura de Tela 2025-04-20 às 12 38 37" src="https://github.com/user-attachments/assets/379519f6-d869-4e23-9b9f-30f7001a175a" />
 <img width="1419" alt="Captura de Tela 2025-04-20 às 12 38 58" src="https://github.com/user-attachments/assets/2b448c26-64ae-48b4-8f99-121bc858dd93" />
 <img width="500"  alt= Captura de Tela 2025-04-20 às 12 39 30" src="https://github.com/user-attachments/assets/8c95988c-c149-4522-804a-45442e97a0ab"/>
 
+## 🔐 Login
 
-##  Login
-
-usuário: admin
-senha Xgtl#k@1
+- usuário: admin
+- senha: Xgtl#k@1
 
 ## 🔥 Funcionalidades
 
