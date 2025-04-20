@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { createDragon, getDetails, updateDragon } from "../../services/api";
 import PageWrapper from "../../components/PageWrapper/PageWrapper";
-import styles from './DragonCreate.module.css';
+import styles from "./DragonCreate.module.css";
 import Button from "../../components/Button/Button";
 
 export type Dragon = {
@@ -43,7 +43,7 @@ export const DragonCreate = () => {
   const editDragon = async () => {
     setLoading(true);
     try {
-        await updateDragon(Number(id), {
+      await updateDragon(Number(id), {
         name: dragon.name,
         type: dragon.type,
       });
@@ -88,33 +88,37 @@ export const DragonCreate = () => {
 
   return (
     <PageWrapper>
-        <div className={styles.container}>
-      {loading ? (
-        <h1>...Loading</h1>
-      ) : (
-        <>
-          <h1>{id ? "Editar" : "Criar"}</h1>
-          <form onSubmit={() => (id ? editDragon() : newDragon())}>
-          <label className={styles.createLabel} htmlFor="name">Nome</label>
-          <input
-            className={styles.createInput}
-            value={dragon.name}
-            name="name"
-            onChange={(e) => handleChange(e)}
-            required
-          />
-          <label className={styles.createLabel} htmlFor="type">Tipo</label>
-          <input
-            className={styles.createInput}
-            name="type"
-            value={dragon.type}
-            onChange={(e) => handleChange(e)}
-            required
-          />
-          <Button label= {id ? "Editar" : "Criar"} primary/>
-          </form>
-        </>
-      )}
+      <div className={styles.container}>
+        {loading ? (
+          <h1>...Loading</h1>
+        ) : (
+          <>
+            <h1>{id ? "Editar" : "Criar"}</h1>
+            <form onSubmit={() => (id ? editDragon() : newDragon())}>
+              <label className={styles.createLabel} htmlFor="name">
+                Nome
+              </label>
+              <input
+                className={styles.createInput}
+                value={dragon.name}
+                name="name"
+                onChange={(e) => handleChange(e)}
+                required
+              />
+              <label className={styles.createLabel} htmlFor="type">
+                Tipo
+              </label>
+              <input
+                className={styles.createInput}
+                name="type"
+                value={dragon.type}
+                onChange={(e) => handleChange(e)}
+                required
+              />
+              <Button label={id ? "Editar" : "Criar"} primary />
+            </form>
+          </>
+        )}
       </div>
     </PageWrapper>
   );

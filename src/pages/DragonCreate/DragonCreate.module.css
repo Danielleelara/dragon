@@ -5,7 +5,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  color: #41561f; 
+  color: #41561f;
   border-radius: 8px;
   background-color: #9acd32;
   margin-top: 50px;
@@ -17,8 +17,6 @@
   font-weight: bold;
 }
 
-
-
 .createInput {
   margin: 2px 0 10px;
   border-radius: 8px;
@@ -29,7 +27,7 @@
 
 @media screen and (min-width: 600px) {
   .container {
-      width: 30%;
-      padding: 2em;
+    width: 30%;
+    padding: 2em;
   }
 }

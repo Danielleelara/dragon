@@ -13,7 +13,7 @@ function App() {
       <>
         <BrowserRouter>
           <Routes>
-            <Route  path="/"  element={<Login />}></Route>
+            <Route  path="/" element={<Login />}></Route>
             <Route path="/dragons-list" element={<DragonsList />}></Route>
             <Route path="/dragon-create" element={<DragonCreate />}></Route> 
             <Route path="/dragon-edit/:id" element={<DragonCreate />}></Route> 
