@@ -29,18 +29,12 @@ cd dragon
 yarn install
 Para iniciar o projeto localmente:
 
-bash
-Copiar
-Editar
 yarn start
 Acesse em: http://localhost:5173
 
 🧪 Testes
 Para executar os testes unitários:
 
-bash
-Copiar
-Editar
 yarn test
 Os testes cobrem os componentes de forma unitária, garantindo estão sendo renderizados corretamente.
 
@@ -56,9 +50,7 @@ Publicar na Vercel.
 Acesse o ambiente de produção em: https://dragon-eta-ivory.vercel.app/
 
 🧾 Estrutura de Pastas
-bash
-Copiar
-Editar
+
 src/
 ├── components/     # Componentes reutilizáveis
 ├── pages/          # Páginas: Login, Lista, Detalhes, Edição
