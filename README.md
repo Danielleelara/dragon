@@ -38,8 +38,8 @@ Clone o projeto e instale as dependências:
 git clone https://github.com/Danielleelara/dragon
 cd dragon
 yarn install
-Para iniciar o projeto localmente:
 
+Para iniciar o projeto localmente:
 yarn start
 Acesse em: http://localhost:5173
 
@@ -52,11 +52,11 @@ Os testes cobrem os componentes de forma unitária, garantindo estão sendo rend
 🚀 Deploy
 O deploy é feito automaticamente na Vercel toda vez que há um push na branch master. O pipeline está configurado para:
 
-Rodar os testes com o Vitest.
+- Rodar os testes com o Vitest.
 
-Se os testes passarem, gerar o build.
+- Se os testes passarem, gerar o build.
 
-Publicar na Vercel.
+- Publicar na Vercel.
 
 Acesse o ambiente de produção em: https://dragon-eta-ivory.vercel.app/
 
@@ -68,14 +68,12 @@ src/
 └── services/       # Configuração das requisições a API
 
 💡 Melhorias Futuras
+
 Autenticação real com backend
 
 Paginação e busca na lista de dragões
 
 Validações mais robustas nos formulários
 
-Testes E2E com Cypress
-
-👩‍💻 Autor(a)
-Desenvolvido por Danielle Souza💙
-Sinta-se à vontade para contribuir, abrir issues ou fazer sugestões!
+👩‍💻 Autora
+Desenvolvido por Danielle Souza

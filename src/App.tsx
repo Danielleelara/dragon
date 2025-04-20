@@ -18,7 +18,7 @@ function App() {
             <Route path="/dragon-create" element={<DragonCreate />}></Route> 
             <Route path="/dragon-edit/:id" element={<DragonCreate />}></Route> 
             <Route path="/details/:id" element={<Details />}></Route> 
-            <Route path="/not-found" element={<NotFound />}></Route> 
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </BrowserRouter>
       </>
