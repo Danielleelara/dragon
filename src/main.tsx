@@ -14,8 +14,8 @@ createServer({
     server.db.loadData({
       users: [
         {
-          nickname: "josé",
-          password: "123",
+          nickname: "admin",
+          password: "Xgtl#k@1",
         },
       ],
     });

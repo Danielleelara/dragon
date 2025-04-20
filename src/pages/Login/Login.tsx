@@ -75,7 +75,7 @@ export const Login = () => {
         <label htmlFor="password">Senha</label>
         <input
           name="password"
-          placeholder="Apenas números"
+          placeholder="A senha contém letras e números!"
           type="password"
           id="password"
           onChange={handleChange}
