@@ -4,6 +4,7 @@ import { Login } from './pages/Login/Login'
 import { Details } from './pages/Details/Details';
 import { DragonsList } from './pages/DragonsList/DragonsList';
 import { DragonCreate } from './pages/DragonCreate/DragonCreate';
+import { NotFound } from './pages/NotFound/NotFound';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/dragon-create" element={<DragonCreate />}></Route> 
             <Route path="/dragon-edit/:id" element={<DragonCreate />}></Route> 
             <Route path="/details/:id" element={<Details />}></Route> 
+            <Route path="/not-found" element={<NotFound />}></Route> 
           </Routes>
         </BrowserRouter>
       </>
