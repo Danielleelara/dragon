@@ -14,7 +14,7 @@ describe("PageWrapper component", () => {
       </BrowserRouter>
     );
 
-    const header = screen.getByText("Home");
+    const header = screen.getByText("Início");
     const footer = screen.getByText("Github - Danielle de Souza");
     const text = screen.getByText("Título");
 

@@ -15,6 +15,6 @@ describe("Header component", () => {
     const header = screen.getByRole("banner");
 
     expect(header).toBeVisible();
-    expect(header).toHaveTextContent("Home");
+    expect(header).toHaveTextContent("Início");
   });
 });
