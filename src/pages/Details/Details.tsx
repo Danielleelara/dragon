@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getDetails } from "../../services/api";
-import PageWrapper from "../../components/PageWrapper";
+import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import styles from "./Details.module.css";
 
 export type Dragon = {

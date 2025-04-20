@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { createDragon, getDetails, updateDragon } from "../../services/api";
-import PageWrapper from "../../components/PageWrapper";
+import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import styles from './DragonCreate.module.css';
+import Button from "../../components/Button/Button";
 
 export type Dragon = {
   createdAt?: string;
@@ -94,19 +95,18 @@ export const DragonCreate = () => {
         <>
           <h1>{id ? "Editar" : "Criar"}</h1>
           <input
+            className={styles.input}
             value={dragon.name}
             name="name"
             onChange={(e) => handleChange(e)}
           />
           <input
+            className={styles.input}
             name="type"
             value={dragon.type}
             onChange={(e) => handleChange(e)}
           />
-          <button onClick={() => (id ? editDragon() : newDragon())}>
-            {" "}
-            {id ? "Editar" : "Criar"}{" "}
-          </button>
+          <Button label= {id ? "Editar" : "Criar"} onClick={() => (id ? editDragon() : newDragon())} primary/>
         </>
       )}
       </div>

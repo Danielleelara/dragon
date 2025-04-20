@@ -3,7 +3,8 @@ import { getList, deleteDragon } from "../../services/api";
 import { CgEye, CgTrash, CgPen } from "react-icons/cg";
 import { useNavigate } from "react-router";
 import styles from "./DragonList.module.css";
-import PageWrapper from "../../components/PageWrapper";
+import PageWrapper from "../../components/PageWrapper/PageWrapper";
+import Button from "../../components/Button/Button";
 
 export type Dragon = {
   createdAt: string;
@@ -66,7 +67,7 @@ export const DragonsList = () => {
         ) : (
           <>
           <div className={styles.buttonDiv}>
-          <button onClick={()=> navigate('/dragon-create')}>Novo</button>
+          <Button label='Novo' onClick={()=> navigate('/dragon-create')}/>
           </div>
             <ul>
               {orderedList &&

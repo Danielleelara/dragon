@@ -1,0 +1,13 @@
+button {
+    cursor: pointer;
+    color: #e3e7da;
+}
+
+.button:hover {
+    background-color:#39500b;
+}
+
+.primary {
+    background-color: #709722;
+    color: #e3e7da;
+}

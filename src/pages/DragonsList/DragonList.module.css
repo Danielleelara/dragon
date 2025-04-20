@@ -14,7 +14,7 @@ ul {
     margin-top: 2rem;
     width: 70%;  
     background: #9ACD32;
-    padding: 16px;
+    padding: 20px;
     border-radius: 8px;
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
@@ -59,7 +59,6 @@ button {
     cursor: pointer;
     margin-top: 30px;
     font-weight: bold;
-
 }
 
 .button:hover {
@@ -70,10 +69,10 @@ button {
 
 @media screen and (min-width: 580px) {
     ul {
-        width: 70%;     
+        width: 59%;     
     }
     .buttonDiv {
-        width: 75%;  
+        width: 65%;  
     }
 } 
 

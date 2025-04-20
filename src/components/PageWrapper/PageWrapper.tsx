@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import { useNavigate } from "react-router";
 
 type Props = {
