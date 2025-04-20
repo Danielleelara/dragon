@@ -12,12 +12,24 @@
   padding: 16px;
 }
 
+.createLabel {
+  color: #41561f;
+  font-weight: bold;
+}
 
-.input {
+
+
+.createInput {
+  margin: 2px 0 10px;
   border-radius: 8px;
   border: none;
   height: 40px;
-  margin: 10px 0 0;
   padding-left: 10px;
-  width: 80%;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+      width: 30%;
+      padding: 2em;
+  }
 }

@@ -2,7 +2,7 @@ import styles from "./Button.module.css";
 
 type Props = {
     label: string;
-    onClick(): void;
+    onClick?:() =>  void;
     primary?: boolean;
 }
 

@@ -16,3 +16,10 @@ p {
   align-items: flex-start;
   font-weight: bold;
 }
+
+@media screen and (min-width: 600px) {
+  .container {
+      width: 30%;
+      padding: 2em;
+  }
+}

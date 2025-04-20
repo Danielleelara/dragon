@@ -94,19 +94,23 @@ export const DragonCreate = () => {
       ) : (
         <>
           <h1>{id ? "Editar" : "Criar"}</h1>
+          <form onSubmit={() => (id ? editDragon() : newDragon())}>
+          <label className={styles.createLabel} htmlFor="name">Nome</label>
           <input
-            className={styles.input}
+            className={styles.createInput}
             value={dragon.name}
             name="name"
             onChange={(e) => handleChange(e)}
           />
+          <label className={styles.createLabel} htmlFor="type">Tipo</label>
           <input
-            className={styles.input}
+            className={styles.createInput}
             name="type"
             value={dragon.type}
             onChange={(e) => handleChange(e)}
           />
-          <Button label= {id ? "Editar" : "Criar"} onClick={() => (id ? editDragon() : newDragon())} primary/>
+          <Button label= {id ? "Editar" : "Criar"} primary/>
+          </form>
         </>
       )}
       </div>
