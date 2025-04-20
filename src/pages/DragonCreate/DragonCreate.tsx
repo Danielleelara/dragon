@@ -90,7 +90,7 @@ export const DragonCreate = () => {
     <PageWrapper>
       <div className={styles.container}>
         {loading ? (
-          <h1>...Loading</h1>
+          <h1>...Carregando</h1>
         ) : (
           <>
             <h1>{id ? "Editar" : "Criar"}</h1>

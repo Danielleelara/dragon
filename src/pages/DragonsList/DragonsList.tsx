@@ -67,7 +67,7 @@ export const DragonsList = () => {
     <PageWrapper>
       <div className={styles.container}>
         {loading ? (
-          <h1>...Loading</h1>
+          <h1>...Carregando</h1>
         ) : (
           <>
             <div className={styles.buttonDiv}>

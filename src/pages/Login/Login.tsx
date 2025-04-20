@@ -75,13 +75,13 @@ export const Login = () => {
         <label htmlFor="password">Senha</label>
         <input
           name="password"
-          placeholder="A senha contém letras e números!"
+          placeholder="Senha"
           type="password"
           id="password"
           onChange={handleChange}
           required
         />
-        <Button label={loading ? "Loading" : "Enviar"} />
+        <Button label={loading ? "Carregando" : "Enviar"} />
       </form>
     </main>
   );
