@@ -1,54 +1,78 @@
-# React + TypeScript + Vite
+# 🐉 Projeto Dragões
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto front-end desenvolvido com **React** e **TypeScript**, que simula uma interface de gerenciamento de dragões. Ele utiliza o **MirageJS** exclusivamente para simular o **login**, enquanto as demais funcionalidades interagem com uma **API real externa**.
 
-Currently, two official plugins are available:
+## 🔥 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 **Login simulado com MirageJS**
+- 📋 **Lista de dragões (API real)**
+- ➕ **Criação de novo dragão (API real)**
+- ✏️ **Edição de dragão existente (API real)**
+- ❌ **Exclusão de dragão (API real)**
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias e Ferramentas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [MirageJS](https://miragejs.com/)
+- [Vitest](https://vitest.dev/)
+- [React Router](https://reactrouter.com/)
+- [Vercel](https://vercel.com/) (deploy automático)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📦 Instalação e uso
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Clone o projeto e instale as dependências:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+git clone https://github.com/Danielleelara/dragon
+cd dragon
+yarn install
+Para iniciar o projeto localmente:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+bash
+Copiar
+Editar
+yarn start
+Acesse em: http://localhost:5173
+
+🧪 Testes
+Para executar os testes unitários:
+
+bash
+Copiar
+Editar
+yarn test
+Os testes cobrem os componentes de forma unitária, garantindo estão sendo renderizados corretamente.
+
+🚀 Deploy
+O deploy é feito automaticamente na Vercel toda vez que há um push na branch master. O pipeline está configurado para:
+
+Rodar os testes com o Vitest.
+
+Se os testes passarem, gerar o build.
+
+Publicar na Vercel.
+
+Acesse o ambiente de produção em: https://dragon-eta-ivory.vercel.app/
+
+🧾 Estrutura de Pastas
+bash
+Copiar
+Editar
+src/
+├── components/     # Componentes reutilizáveis
+├── pages/          # Páginas: Login, Lista, Detalhes, Edição
+└── services/       # Configuração das requisições a API
+
+💡 Melhorias Futuras
+Autenticação real com backend
+
+Paginação e busca na lista de dragões
+
+Validações mais robustas nos formulários
+
+Testes E2E com Cypress
+
+👩‍💻 Autor(a)
+Desenvolvido por Danielle Souza💙
+Sinta-se à vontade para contribuir, abrir issues ou fazer sugestões!
