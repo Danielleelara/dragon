@@ -1,53 +1,49 @@
-
 .container {
-    width: 70%;
-    margin: auto;
-    padding: 1rem;
-    background-color:#41561f; ;  
-    border-radius: 5%;
-
+  width: 70%;
+  margin: auto;
+  padding: 1rem;
+  background-color: #41561f;
+  border-radius: 5%;
 }
 
 .title {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 3em;
-    color: #9ACD32;
-    font-family: 'Caveat', cursive;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 3em;
+  color: #9acd32;
+  font-family: "Caveat", cursive;
 }
 
 form {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
 
-    display: flex;
-    flex-direction: column;
-    text-align: start;
+  label {
+    color: #9acd32;
+    font-weight: bold;
+    margin: 6px 0;
+  }
 
-    label {
-        color: #9ACD32;
-        font-weight: bold;
-        margin: 6px 0;
-    }
-
-    input {
-        border-radius: 8px;
-        border: none;
-        height: 40px;
-        margin: 10px 0 0;
-        padding-left: 10px;
-    }
-
+  input {
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+    margin: 10px 0 0;
+    padding-left: 10px;
+  }
 }
 
 @media screen and (min-width: 600px) {
-    .container {
-        width: 30%;
-        padding: 2em;
-    }
+  .container {
+    width: 30%;
+    padding: 2em;
+  }
 }
- 
+
 @media screen and (min-width: 1200px) {
-    .container {
-        width: 20%;
-        padding: 2em;
-    }
+  .container {
+    width: 20%;
+    padding: 2em;
+  }
 }

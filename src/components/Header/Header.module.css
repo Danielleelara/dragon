@@ -1,19 +1,18 @@
 header {
-    width: 100%;
+  width: 100%;
 }
 
-
 .link {
-    font-family: 'Caveat', cursive;
-    font-weight: bold;
-    font-size: 2em;
-    margin-top: 0.5em;
-    color: #dde3d2;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 30px;
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 0.5em;
+  color: #dde3d2;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 30px;
 }
 
 .link:hover {
-    color: #90c436;
+  color: #90c436;
 }

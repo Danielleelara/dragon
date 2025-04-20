@@ -12,7 +12,7 @@ describe("Header component", () => {
       </BrowserRouter>
     );
 
-    const header = screen.getByRole('banner');
+    const header = screen.getByRole("banner");
 
     expect(header).toBeVisible();
     expect(header).toHaveTextContent("Home");

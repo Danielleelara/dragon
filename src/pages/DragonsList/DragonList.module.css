@@ -1,106 +1,101 @@
 .container {
-    width: 100%; 
-    display: flex; 
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: #41561f; 
-    border-radius: 8px;
-    overflow: auto;
-    padding-bottom: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #41561f;
+  border-radius: 8px;
+  overflow: auto;
+  padding-bottom: 5rem;
 }
 
 .listContainer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 ul {
-    margin-top: 2rem;
-    width: 70%;  
-    background: #9ACD32;
-    padding: 20px;
-    border-radius: 8px;
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  
-    gap: 16px; 
-  
+  margin-top: 2rem;
+  width: 70%;
+  background: #9acd32;
+  padding: 20px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
 }
 
 li {
-    display: flex;
-    justify-content: space-between;
-    height: 40px;
-    width: 30%;
-    border-bottom: 1px solid #586b394f ;
-}  
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  width: 30%;
+  border-bottom: 1px solid #586b394f;
+}
 
 .icon {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .icon:hover {
-    color:aliceblue;
+  color: aliceblue;
 }
 
 .dragonsName {
-    width: 70%;
-    justify-content: start;
-}  
+  width: 70%;
+  justify-content: start;
+}
 
 .buttonDiv {
-    width: 80%;  
-    display: flex; 
-    justify-content: flex-end;
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media screen and (min-width: 580px) {
-    ul {
-        width: 59%;     
-    }
-    .buttonDiv {
-        width: 65%;  
-    }
-} 
+  ul {
+    width: 59%;
+  }
+  .buttonDiv {
+    width: 65%;
+  }
+}
 
 @media screen and (min-width: 700px) {
-    ul {
-        width: 60%; 
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));       
-    }
-    .buttonDiv {
-        width: 65%;  
-    }
-
-} 
+  ul {
+    width: 60%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+  .buttonDiv {
+    width: 65%;
+  }
+}
 
 @media screen and (min-width: 900px) {
-    ul {
-        width: 50%;   
-    }
-    .buttonDiv {
-        width: 55%;  
-    }
-
-} 
+  ul {
+    width: 50%;
+  }
+  .buttonDiv {
+    width: 55%;
+  }
+}
 
 @media screen and (min-width: 1200px) {
-    ul {
-        width: 35%;      
-    } 
-    .buttonDiv {
-        width: 38%;  
-    }
-} 
+  ul {
+    width: 35%;
+  }
+  .buttonDiv {
+    width: 38%;
+  }
+}
 
 @media screen and (min-width: 2200px) {
-
-    ul {
-        width: 30%;  
-        margin-bottom: 10px;
-    }
-    .buttonDiv {
-        width: 31%;  
-    }
-
-} 
+  ul {
+    width: 30%;
+    margin-bottom: 10px;
+  }
+  .buttonDiv {
+    width: 31%;
+  }
+}

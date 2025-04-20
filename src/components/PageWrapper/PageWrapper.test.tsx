@@ -21,6 +21,5 @@ describe("PageWrapper component", () => {
     expect(header).toBeVisible();
     expect(footer).toBeVisible();
     expect(text).toBeVisible();
-
   });
 });

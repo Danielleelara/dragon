@@ -33,7 +33,7 @@ export const DragonsList = () => {
   };
 
   const editDragon = async (id: number) => {
-    navigate(`/dragon-edit/${id}`)
+    navigate(`/dragon-edit/${id}`);
   };
 
   const removeDragon = async (id: number) => {
@@ -45,9 +45,8 @@ export const DragonsList = () => {
         "Não foi possivel deletar esse item. Tente novamente ou contate o nosso time!"
       );
     } finally {
-      getDragonList()
+      getDragonList();
       setLoading(false);
-
     }
   };
 
@@ -66,27 +65,37 @@ export const DragonsList = () => {
           <h1>...Loading</h1>
         ) : (
           <>
-          <div className={styles.buttonDiv}>
-          <Button label='Novo' onClick={()=> navigate('/dragon-create')}/>
-          </div>
+            <div className={styles.buttonDiv}>
+              <Button label="Novo" onClick={() => navigate("/dragon-create")} />
+            </div>
             <ul>
               {orderedList &&
                 orderedList.map((dragon) => (
                   <div key={dragon.id} className={styles.listContainer}>
                     <li className={styles.dragonsName}>{dragon.name}</li>
                     <li>
-                    <CgEye title="Detalhes" className={styles.icon} onClick={() => navigate(`/details/${dragon.id}`)}/>
-                     <CgPen title="Editar" className={styles.icon} onClick={()=> editDragon(Number(dragon.id))}/>
-                    <CgTrash title="Deletar" className={styles.icon} onClick={()=> removeDragon(Number(dragon.id))}/>
+                      <CgEye
+                        title="Detalhes"
+                        className={styles.icon}
+                        onClick={() => navigate(`/details/${dragon.id}`)}
+                      />
+                      <CgPen
+                        title="Editar"
+                        className={styles.icon}
+                        onClick={() => editDragon(Number(dragon.id))}
+                      />
+                      <CgTrash
+                        title="Deletar"
+                        className={styles.icon}
+                        onClick={() => removeDragon(Number(dragon.id))}
+                      />
                     </li>
                   </div>
                 ))}
             </ul>
-
-            
           </>
-          )}
-        </div>
+        )}
+      </div>
     </PageWrapper>
   );
 };

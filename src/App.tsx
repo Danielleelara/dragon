@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
-import './App.css'
 import { Login } from './pages/Login/Login'
 import { Details } from './pages/Details/Details';
 import { DragonsList } from './pages/DragonsList/DragonsList';

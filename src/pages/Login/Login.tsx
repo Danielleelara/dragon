@@ -34,7 +34,7 @@ export const Login = () => {
       const response = await fetch("http://localhost:5173/", {
         method: "POST",
         body: JSON.stringify(user),
-        referrerPolicy: "unsafe-url" 
+        referrerPolicy: "unsafe-url",
       });
 
       if (response.ok) {
@@ -51,12 +51,12 @@ export const Login = () => {
     }
   };
 
-  useEffect(()=> {
-   const hasToken =  sessionStorage.getItem('token')
-    if(hasToken){
-      navigate('/dragons-list')
+  useEffect(() => {
+    const hasToken = sessionStorage.getItem("token");
+    if (hasToken) {
+      navigate("/dragons-list");
     }
-  }, [navigate])
+  }, [navigate]);
 
   return (
     <main className={styles.container}>
